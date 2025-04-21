@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="styles/all.min.css">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  
+    <!-- crud -->
+
+    <main class="w-75 mx-auto  ">
+        <section class="bg-info  p-3">
+            <div class="inputs-form mb-2">
+                <label for="productName">productName</label>
+                <input type="text" id="productName" class="form-control" placeholder="productName">
+            </div>
+            <div class="inputs-form mb-2">
+                <label for="productPrice">productPrice</label>
+                <input type="number" id="productPrice" class="form-control" placeholder="productPrice">
+            </div>
+            <div class="inputs-form mb-2">
+                <label for="productCategory">productCategory</label>
+                <input type="text" id="productCategory" class="form-control" placeholder="productCategory">
+            </div>
+            <div class="inputs-form mb-2">
+                <label for="productDescription">productDescription</label>
+                <textarea id="productDescription" class="form-control" placeholder="productDescription"></textarea>
+            </div>
+
+            <button onclick="addProduct()" id="addBtn" class="w-100 btn btn-primary">Add Product</button>
+            <button onclick="updateProduct()" id="updateBtn" class="w-100 btn btn-primary d-none">Update Product</button>
+
+            
+        </section>
+        <input oninput="searchProduct()" id="searchInput" type="text" class="form-control my-3 w-75 mx-auto" placeholder="Search">
+
+
+        <section class=" mt-4">
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody id="data">
+                    
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+
+   <script src="Js/all.min.js"></script> 
+   <script src="Js/bootstrap.bundle.min.js"></script> 
+   <script src="Js/index.js"></script>
+</body>
+</html>
+
